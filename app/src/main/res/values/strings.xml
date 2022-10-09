@@ -1,5 +1,10 @@
 <resources>
     <string name="app_name">HackerUApp</string>
-    <string name="person_to_add" />
-    <string name="add" />
+    <string name="add">Add</string>
+    <string name="item_to_add">Item to add</string>
+    <string name="email">Email</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="remove">remove</string>
+    <string name="name_of_the_person_you_want_to_add">name of the person you want to add</string>
 </resources>

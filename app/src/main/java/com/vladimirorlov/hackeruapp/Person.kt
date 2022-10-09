@@ -1,4 +1,15 @@
 package com.vladimirorlov.hackeruapp
 
-//data class Item(val name: String, val image: Int)
-data class Person(val name: String, val image: Int, val details: String? = null)
+import androidx.room.ColumnInfo
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+// room using for database in sql
+@Entity(tableName = "peopleTable")
+data class Person(
+    @ColumnInfo(name = "person_name") val name: String,
+    @ColumnInfo(name = "person_image") val image: Int,
+) {
+    @PrimaryKey(autoGenerate = true)
+    var id = 0
+}

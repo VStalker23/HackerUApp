@@ -6,6 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/person_details_fragment"
+        android:layout_width="273dp"
+        android:layout_height="377dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:translationZ="1dp"
+        tools:layout_constraintCircleRadius="50dp"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
@@ -35,12 +46,11 @@
 
     <EditText
         android:id="@+id/item_name_input"
-
         android:layout_width="150dp"
         android:layout_height="50dp"
 
         android:autofillHints=""
-        android:hint="@string/person_to_add"
+        android:hint="@string/item_to_add"
 
         android:inputType="text"
         android:textAlignment="center"
