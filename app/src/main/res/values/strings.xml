@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">HackerUApp</string>
+    <string name="person_to_add" />
+    <string name="add" />
 </resources>
