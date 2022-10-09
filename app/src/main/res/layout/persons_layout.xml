@@ -6,6 +6,7 @@
     android:layout_height="wrap_content">
 
     <LinearLayout
+        android:id="@+id/person_card_recycler"
         android:layout_width="match_parent"
         android:layout_height="75dp"
         android:layout_margin="5dp"
@@ -19,20 +20,21 @@
         app:layout_goneMarginRight="10dp">
 
         <ImageView
-            android:id="@+id/person_image"
+            android:id="@+id/item_image"
             android:layout_width="9dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:src="@drawable/avatar1_foreground" />
 
         <TextView
-            android:id="@+id/person_name"
+            android:id="@+id/item_name"
             android:layout_width="211dp"
             android:layout_height="match_parent"
             android:layout_marginLeft="20dp"
             android:layout_weight="1"
             android:gravity="center|fill_horizontal"
-            android:text="TextView" />
+            android:text="TextView"
+            android:textStyle="bold" />
 
         <ImageButton
             android:id="@+id/remove_button"
