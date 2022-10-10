@@ -1,10 +1,7 @@
 package com.vladimirorlov.hackeruapp
 
 import androidx.lifecycle.LiveData
-import androidx.room.Dao
-import androidx.room.Delete
-import androidx.room.Insert
-import androidx.room.Query
+import androidx.room.*
 
 @Dao
 interface PeopleDao {
@@ -20,5 +17,14 @@ interface PeopleDao {
     // get all list of all person in list
     @Query("Select * from peopleTable")
     fun getAllPeople(): LiveData<List<Person>>
+
+    @Update
+    fun updateNote(person: Person)
+
+    fun updatePersonImage(person: Person, imagePath: String, imageType: IMAGE_TYPE){
+        person.imagePath = imagePath
+        person.imageType = imageType
+        updateNote(person)
+    }
 
 }

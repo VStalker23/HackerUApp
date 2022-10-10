@@ -21,14 +21,14 @@
 
         <ImageView
             android:id="@+id/item_image"
-            android:layout_width="9dp"
+            android:layout_width="75dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:src="@drawable/avatar1_foreground" />
 
         <TextView
             android:id="@+id/item_name"
-            android:layout_width="211dp"
+            android:layout_width="185sp"
             android:layout_height="match_parent"
             android:layout_marginLeft="20dp"
             android:layout_weight="1"
@@ -36,11 +36,18 @@
             android:text="TextView"
             android:textStyle="bold" />
 
+
+        <ImageButton
+            android:id="@+id/camera_button"
+            android:layout_width="75dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/camera" />
+
         <ImageButton
             android:id="@+id/remove_button"
-            android:layout_width="1dp"
+            android:layout_width="100dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_weight="5"
             android:background="#FFFFFF"
             android:src="@drawable/delete_outline_foreground"
             tools:ignore="SpeakableTextPresentCheck" />

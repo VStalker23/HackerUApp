@@ -10,6 +10,7 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import de.hdodenhof.circleimageview.CircleImageView
+import com.bumptech.glide.Glide
 
 class PersonAdapter(
     private val personList: ArrayList<Person>,
@@ -50,6 +51,8 @@ class PersonAdapter(
 
         }
 
+
+
         holder.removeBtn.setOnClickListener {
             val builder = AlertDialog.Builder(holder.itemView.context)
             builder.setTitle("Delete item")
@@ -67,4 +70,10 @@ class PersonAdapter(
     override fun getItemCount(): Int {
         return personList.size
     }
+
+//    fun heyAdapterPleaseUpdateTheView(personsList: List<Person>) {
+//        dataList.clear()
+//        dataList.addAll(personsList)
+//        notifyDataSetChanged()
+//    }
 }
