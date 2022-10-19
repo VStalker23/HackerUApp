@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="1000">
+       <KeyFrameSet>
+       </KeyFrameSet>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            motion:layout_constraintVertical_bias="0.068"
+            android:layout_height="75dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintHorizontal_bias="0.492"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="346dp"
+            motion:layout_constraintTop_toBottomOf="@+id/et_person_update_name"
+            android:id="@+id/et_person_update_details" />
+        <Constraint
+            motion:layout_editor_absoluteY="-65dp"
+            android:layout_height="match_parent"
+            motion:layout_editor_absoluteX="0dp"
+            android:layout_width="match_parent"
+            android:id="@+id/textView"
+            motion:transitionEasing="cubic(0.55,0.09,0.8,0.8)" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            motion:layout_constraintVertical_bias="0.61"
+            android:layout_height="wrap_content"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintHorizontal_bias="0.498"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:id="@+id/et_person_update_name" />
+        <Constraint
+            android:id="@+id/et_person_update_name"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintVertical_bias="0.315"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintHorizontal_bias="0.0"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:transitionEasing="cubic(0.86,0.44,0.8,0.8)" />
+    </ConstraintSet>
+</MotionScene>

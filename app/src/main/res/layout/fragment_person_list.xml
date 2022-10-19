@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/person_fragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="25dp"
+    tools:context=".ui.register.person.PersonFragment">
+
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/materialToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:theme="@style/ThemeOverlay.MaterialComponents.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/close_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            app:layout_constraintBottom_toBottomOf="@+id/materialToolbar"
+            app:layout_constraintStart_toStartOf="@+id/materialToolbar"
+            app:layout_constraintTop_toTopOf="@+id/materialToolbar"
+            app:tint="@color/dark_grey" />
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Name"
+        app:hintAnimationEnabled="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_person_update_name"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginBottom="25dp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_person_update_details"
+
+                paddingBottomSystemWindowInsets="@{true}"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="top"
+                android:hint="Some Details About you"
+                android:minHeight="250dp"
+                android:paddingBottom="32dp"
+                app:lineHeight="24sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+

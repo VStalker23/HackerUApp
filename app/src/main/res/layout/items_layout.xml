@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:id="@+id/person_card_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_margin="5dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_goneMarginRight="10dp">
+
+
+        <ImageView
+            android:id="@+id/item_image"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_person" />
+
+        <TextView
+            android:id="@+id/item_name"
+            android:layout_width="211dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="25dp"
+            android:layout_weight="1"
+            android:gravity="center|fill_horizontal"
+            android:text="TextView"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/edit_button"
+            android:layout_width="48dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:src="@drawable/ic_edit"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </LinearLayout>
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:dividerInsetEnd="16dp"
+        app:dividerInsetStart="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/person_card_recycler" />
+</androidx.constraintlayout.widget.ConstraintLayout>

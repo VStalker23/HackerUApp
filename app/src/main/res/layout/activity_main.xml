@@ -1,168 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_activity_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".ui.MainActivity">
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/person_details_fragment"
-        android:layout_width="273dp"
-        android:layout_height="377dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:translationZ="1dp"
-        tools:layout_constraintCircleRadius="50dp"/>
 
-    <TextView
-        android:id="@+id/title_text_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/PersonNotesApp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_view"
+    <fragment
+        android:id="@+id/fragmentContainerView"
+        android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
-        android:layout_height="330dp"
-        android:layout_margin="20dp"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/add_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:layout_marginTop="9dp"
-        android:text="@string/add"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/item_name_input"
-        app:layout_constraintVertical_bias="0.935" />
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/navigation_graph"
+        android:translationZ="5dp"
+        />
 
     <EditText
         android:id="@+id/item_name_input"
         android:layout_width="150dp"
         android:layout_height="50dp"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="100dp"
+        android:inputType="text" />
 
-        android:autofillHints=""
-        android:hint="@string/item_to_add"
-
-        android:inputType="text"
-        android:textAlignment="center"
-        android:textSize="14sp"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.847" />
-
-    <EditText
-        android:id="@+id/note_desc_et"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:hint="write description or how much to buy"
-        android:inputType="text"
-        android:textAlignment="center"
-        android:textSize="14sp"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@id/add_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <LinearLayout
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottom_nav_bar"
+        style="@style/Widget.MaterialComponents.BottomAppBar.PrimarySurface"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/item_name_input"
-        app:layout_constraintTop_toBottomOf="@+id/recycler_view"
-        app:layout_constraintVertical_bias="0.9"
-        tools:layout_editor_absoluteX="0dp">
+        android:layout_gravity="bottom"
 
-        <LinearLayout
-            android:id="@+id/linearLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:visibility="visible">
+        app:hideOnScroll="true"
+        app:fabCradleMargin="10dp"
+        app:fabCradleVerticalOffset="10dp"
+        app:menu="@menu/bottom_manu_nav"
+        app:popupTheme="@style/ThemeOverlay.Material3.BottomAppBar" />
 
-            <ImageButton
-                android:id="@+id/avatar_img_1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="#FFFFFF"
-                android:src="@drawable/avatar1_foreground" />
-
-            <ImageButton
-                android:id="@+id/avatar_img_2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="#FFFFFF"
-                android:src="@drawable/avatar2_foreground" />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:theme="@style/ThemeOverlay.Material3"
+        style="@style/Widget.Material3.FloatingActionButton.Surface"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/add_new_person"
+        android:isScrollContainer="true"
+        android:transitionName="shared_transition"
+        app:layout_anchor="@id/bottom_nav_bar"
+        app:layout_anchorGravity="top|center"
+        app:srcCompat="@drawable/ic_baseline_add"
+        tools:ignore="ImageContrastCheck" />
 
 
-            <ImageButton
-                android:id="@+id/avatar_img_3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="#FFFFFF"
-                android:src="@drawable/avatar3_foreground" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="horizontal">
-
-            <RadioGroup
-                android:id="@+id/radioItemSelect"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                tools:layout_editor_absoluteX="203dp"
-                tools:layout_editor_absoluteY="357dp">
-
-                <RadioButton
-                    android:id="@+id/radioButton1"
-                    android:layout_width="138dp"
-                    android:layout_height="wrap_content" />
-
-                <RadioButton
-                    android:id="@+id/radioButton2"
-                    android:layout_width="137dp"
-                    android:layout_height="wrap_content" />
-
-                <RadioButton
-                    android:id="@+id/radioButton3"
-                    android:layout_width="137dp"
-                    android:layout_height="wrap_content" />
-
-            </RadioGroup>
-
-        </LinearLayout>
-    </LinearLayout>
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="home"
+        android:id="@+id/home_om"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:icon="@drawable/ic_baseline_login_24"
+        android:id="@+id/logout_om"
+        android:title="Logout"/>
+
+    <item
+        android:icon="@drawable/ic_baseline_search_24"
+        android:id="@+id/search_om"
+        android:title="Search"
+        app:showAsAction="ifRoom"
+        />
+
+</menu>

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "147716966438",
+    "project_id": "myfirstapp-ecd27",
+    "storage_bucket": "myfirstapp-ecd27.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:147716966438:android:10a6af803408e7e6c6fee7",
+        "android_client_info": {
+          "package_name": "com.vladimirorlov.hackeruapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "147716966438-qe1ft4tiqkn0o7ca6bu0rh6ioihji2uu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.vladimirorlov.hackeruapp",
+            "certificate_hash": "a6efe6ba015de780b1000ecbe623134e9f96c911"
+          }
+        },
+        {
+          "client_id": "147716966438-hatd2lge4dma6om6tdhtk74h69ffeakv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGrc2uz1End2KDlt-1g9EYKmmvZbwyVa0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "147716966438-hatd2lge4dma6om6tdhtk74h69ffeakv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

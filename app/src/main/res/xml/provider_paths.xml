@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+<paths>
+    <external-path
+        name="external_files"
+        path="." />
+</paths>-->
+<paths>
+    <files-path
+        name="pictures_root"
+        path="/storage/emulated/0/Pictures/" />
+
+    <external-path
+        name="external_storage_root"
+        path="/storage/emulated/0/Pictures/" />
+</paths>
